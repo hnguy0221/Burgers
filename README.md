@@ -4,4 +4,4 @@ My name is Hai Nguyen. I created this application (Eat-Da-Burgers) as part of th
 1. Clone the Burgers project.
 2. In the schema.sql and seeds.sql - run the SQL statements in these files to create the database, table, and the data.
 3. At the terminal of the Burgers project, type in "node server.js", and hit enter.
-4. Launch a web browser and type localhost:3000
+4. Launch a web browser and type, localhost:3000, in the URL field, and hit enter.
