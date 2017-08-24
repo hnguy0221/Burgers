@@ -6,7 +6,7 @@ My name is Hai Nguyen. I created this application (Eat-Da-Burgers) as part of th
 
 ![Image of Eat-Da-Burgers application](https://github.com/hnguy0221/Burgers/blob/master/public/assets/images/Eat-Da-Burgers.png)
 
-##To install the application, please follow these steps:
+## To install the application, please follow these steps:
 
 * Git Clone the repository
 * Navigate to the folder where the repository exists using Git Bash or Terminal.
