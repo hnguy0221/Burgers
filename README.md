@@ -6,7 +6,7 @@ My name is Hai Nguyen. I created this application (Eat-Da-Burgers) as part of th
 
 If there are no hamburgers in the database, the application is displayed like the one below:
 
-![Image of Eat-Da-Burgers application](https://github.com/hnguy0221/Burgers/blob/master/public/assets/images/Eat-Da-Burgers.png)
+![Image of Eat-Da-Burgers application](https://github.com/hnguy0221/Burgers/blob/master/public/assets/images/Eat-Da-Burgers-No-Data.png)
 
 * Live Demo: <https://guarded-brushlands-49347.herokuapp.com/>
 
