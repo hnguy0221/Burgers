@@ -27,14 +27,44 @@ var orm = {
     },
 
     create: function(table, val, cb) {
-      var queryString = "INSERT INTO " + table + " (burger_name) VALUES ('" + val + "');";
-      console.log(queryString);
-      connection.query(queryString, function(err, result) {
-          if (err) {
+        var queryString = "SELECT *  FROM Customers WHERE cust_nm = 'UNKNOWN';";
+        console.log(queryString);
+        connection.query(queryString, function(err, result) {
+            if (err) {
               throw err;
-          }
-          cb(result);
-      });
+            }
+            console.log(result[0].id);
+            console.log(result);
+            if (result === null || result === undefined) {
+                console.log("UNKNOWN row does not exist ...");
+                queryString = "INSERT INTO Customers (cust_nm) VALUES('UNKNOWN');";
+                console.log(queryString);
+                connection.query(queryString, function(err, result) {
+                    if (err) {
+                        throw err;
+                    }
+                    queryString = "INSERT INTO " + table + " (burger_name, CustomerId) VALUES ('" + val + "', " + result[0].id + ");";
+                    console.log(queryString);
+                    connection.query(queryString, function(err, result) {
+                        if (err) {
+                            throw err;
+                        }
+                        cb(result);
+                    });
+                });
+            }
+            else {
+                console.log("UNKNOWN row exists ...");
+                queryString = "INSERT INTO " + table + " (burger_name, CustomerId) VALUES ('" + val + "', " + result[0].id + ");";
+                console.log(queryString);
+                connection.query(queryString, function(err, result) {
+                    if (err) {
+                        throw err;
+                    }
+                    cb(result);
+                });
+            }
+        });
     }
 };
 
